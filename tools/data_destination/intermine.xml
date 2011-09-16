@@ -19,12 +19,16 @@
 	        <param name="REDIRECT_URL" type="hidden" value="http://intermine.modencode.org/query/genomicRegionSearch.do" />
             </when>
             <when value="metabolicmine">
-                <param name="REDIRECT_URL" type="hidden" value="http://www.metabolicmine.org/beta/query/genomicRegionSearch.do" />
+                <param name="REDIRECT_URL" type="hidden" value="http://www.metabolicmine.org/query/genomicRegionSearch.do" />
             </when>
 	</conditional>
         <param name="DATA_URL" type="baseurl" value="/datasets" />
         <param name="GALAXY_URL" type="baseurl" value="/tool_runner?tool_id=intermine_import" />
+        <param name="REDIRECT_URL" type="hidden" value="http://www.flymine.org/query/genomicRegionSearch.do" />
     </inputs>
+    <request_param_translation>
+        <request_param galaxy_name="REDIRECT_URL" remote_name="destination|REDIRECT_URL" missing="http://www.flymine.org/query/genomicRegionSearch.do" />
+    </request_param_translation>
     <outputs/>
     <help>
 
